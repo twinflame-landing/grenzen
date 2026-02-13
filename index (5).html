@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dualseelen-Workshop: Grenzen setzen für Perfekte Einheit – Zoom</title>
+
+  <!-- Social Preview -->
+  <meta property="og:title" content="Dualseelen-Workshop: Grenzen setzen für Perfekte Einheit">
+  <meta property="og:description" content="60 Minuten Zoom Workshop. Bonus: gechanneltes Highlight pro Teilnehmer:in, PDF-Workbook, Aufzeichnung.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/grenzen-hero.jpg">
+
+  <style>
+    :root{
+      --bg:#0b1222;
+      --bg2:#08070c;
+      --card:#0e162a;
+      --border:#233045;
+      --muted:#94a3b8;
+      --text:#e5e7eb;
+
+      /* gold/amber vibe */
+      --accent:#d8b65b;
+      --accent2:#ffdf9a;
+
+      --button:#22c55e; /* conversion green (kannst du auf gold umstellen) */
+    }
+
+    html,body{
+      margin:0;padding:0;
+      background:
+        radial-gradient(1200px 600px at 50% 0%, rgba(216,182,91,.12), transparent 60%),
+        radial-gradient(900px 520px at 85% 30%, rgba(255,223,154,.08), transparent 60%),
+        linear-gradient(180deg,var(--bg2),var(--bg));
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
+      line-height:1.5;
+    }
+
+    .wrap{max-width:980px;margin:0 auto;padding:24px}
+    .hero{padding:12px 16px;text-align:center}
+    h1{font-size:clamp(28px,4vw,40px);margin:8px 0 4px}
+    .sub{color:var(--muted);margin:6px 0 16px}
+
+    .tabs{display:flex;gap:8px;justify-content:center;margin:12px 0 18px;flex-wrap:wrap}
+    .tab{
+      border:1px solid #334155;color:var(--text);
+      padding:8px 12px;border-radius:999px;cursor:pointer;
+      background:#0b1324;
+    }
+    .tab.active{
+      background:rgba(216,182,91,.16);
+      border-color:rgba(216,182,91,.55);
+      font-weight:700;
+      box-shadow:0 0 0 2px rgba(216,182,91,.10) inset;
+    }
+
+    .grid{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:960px){.grid{grid-template-columns:1.2fr .8fr}}
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.02), transparent 40%), var(--card);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px;
+      box-shadow:0 10px 30px rgba(0,0,0,.28);
+    }
+
+    h2{font-size:20px;margin:0 0 8px}
+    ul{padding-left:18px;margin:10px 0}
+
+    .pill{
+      display:inline-block;
+      background:#15223a;
+      border:1px solid #2a3b5e;
+      border-radius:999px;
+      padding:6px 10px;
+      color:var(--muted);
+      font-size:14px;
+      white-space:nowrap;
+    }
+
+    .row{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+
+    .cta{
+      display:inline-block;
+      margin-top:10px;
+      background:var(--button);
+      color:#052e1a;
+      font-weight:800;
+      text-decoration:none;
+      padding:12px 16px;
+      border-radius:12px;
+    }
+    .cta:hover{filter:brightness(1.08)}
+
+    .hr{height:1px;background:#22324f;margin:16px 0;border-radius:1px}
+    .hidden{display:none}
+
+    .badge{
+      display:inline-block;
+      background:rgba(216,182,91,.10);
+      border:1px solid rgba(216,182,91,.28);
+      border-radius:10px;
+      padding:5px 10px;
+      margin:2px 6px 0 0;
+      font-size:12px;
+      color:rgba(255,223,154,.95);
+    }
+
+    .note{font-size:13px;color:var(--muted)}
+    .big{font-size:18px}
+
+    .heroimg{
+      overflow:hidden;border-radius:16px;border:1px solid var(--border);
+      box-shadow:0 10px 30px rgba(0,0,0,.28);
+      margin:8px auto 10px;
+    }
+    .heroimg img{width:100%;max-height:360px;object-fit:cover;display:block}
+
+    .sideimg{overflow:hidden;border-radius:16px;border:1px solid var(--border)}
+    .sideimg img{width:100%;height:auto;display:block}
+    .cap{font-size:12px;color:var(--muted);margin-top:6px;text-align:center}
+
+    .glowline{
+      height:1px;
+      background:linear-gradient(90deg, transparent, rgba(216,182,91,.65), transparent);
+      margin:14px 0 0;
+      border-radius:1px;
+    }
+
+    /* Bonus Panel */
+    .bonus{
+      margin-top:14px;
+      border-radius:14px;
+      padding:14px;
+      border:1px solid rgba(216,182,91,.28);
+      background:linear-gradient(180deg, rgba(216,182,91,.10), rgba(0,0,0,.10));
+      box-shadow:0 10px 30px rgba(0,0,0,.22);
+    }
+    .bonusTitle{
+      font-weight:900;
+      letter-spacing:.08em;
+      font-size:12px;
+      color:rgba(255,223,154,.95);
+      margin:0 0 8px;
+    }
+    .bonusList{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:8px;
+    }
+    .bonusItem{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+      font-weight:700;
+    }
+    .bonusIcon{
+      width:22px;
+      text-align:center;
+      flex:0 0 22px;
+      filter:drop-shadow(0 2px 6px rgba(216,182,91,.25));
+    }
+
+    /* Footer legal (sehr klein) */
+    footer.legal{
+      max-width:980px;
+      margin:18px auto 40px;
+      padding:0 24px;
+      color:rgba(229,231,235,.70);
+      font-size:11px;
+      line-height:1.45;
+    }
+    footer.legal a{color:rgba(229,231,235,.85)}
+    footer.legal .muted{color:rgba(229,231,235,.58)}
+    footer.legal hr{border:0;height:1px;background:#22324f;margin:14px 0}
+    footer.legal ul{margin:8px 0 0 18px;padding:0}
+    footer.legal .legalTitle{
+      margin:0 0 10px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.06em;
+      color:rgba(229,231,235,.85);
+    }
+  </style>
+
+  <script>
+    const PAYMENT_LINK = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Y5ZHR86C3J3XJ";
+
+    const STR = {
+      de: {
+        badge1: "WORKSHOP · Zoom",
+        badge2: "60 Minuten",
+        badge3: "BONUS: Channeling, Workbook, Aufzeichnung",
+        title: "Dualseelen-Workshop: Grenzen setzen für Perfekte Einheit",
+        sub: "Ein klarer, liebevoller Raum für Selbstrespekt, Nervensystem-Sicherheit und echte Veränderung in deiner Dualseelen-Dynamik. Grenzen sind keine Trennung, sie sind Klarheit und Liebe in Aktion.",
+        date1: "Sonntag, 1. März 2026",
+        time1: "20:00 Uhr",
+        book: "Workshop-Ticket buchen",
+        imgCap: "Sichere Liebe, klare Grenzen, echte Richtung",
+        youGetTitle: "Was du mitnimmst",
+        youGet: [
+          "Warum Dualseelen oft Grenzen vermeiden (und was das kostet)",
+          "Die 3 grössten Lücken bei Grenzen: Emotion, Zeit, Energie",
+          "Übung: Wo übergehe ich mich selbst?",
+          "Energetische Feld-Reparatur: Energie zurückholen",
+          "Klare Sätze, die Respekt und Anziehung stärken",
+          "Integration und Q&A"
+        ],
+        bonusTitle: "BONUS",
+        bonus: [
+          { icon:"✨", text:"Gechanneltes Highlight für jede:n Teilnehmer:in" },
+          { icon:"📄", text:"PDF-Workbook" },
+          { icon:"▶", text:"Aufzeichnung" }
+        ],
+        zoomNote: "Zoom · Link nach Buchung",
+        bookTitle: "Buchen",
+        bookNote: "Klicke auf den Button, buche sicher und erhalte anschließend alle Infos per E-Mail. Mit der Zahlung bestätigst du, dass du die Allgemeinen Geschäftsbedingungen gelesen hast und ihnen zustimmst.",
+        bottom: "Anmeldung über den bereitgestellten Link"
+      },
+      en: {
+        badge1: "WORKSHOP · Zoom",
+        badge2: "60 minutes",
+        badge3: "BONUS: Channeling, workbook, replay",
+        title: "Twin Flame Workshop: Set Boundaries for Perfect Union",
+        sub: "A clear, heart-led space for self-respect, nervous system safety, and real change in your Twin Flame dynamic. Boundaries are not rejection, they are clarity and love in action.",
+        date1: "Sunday, March 1, 2026",
+        time1: "8:00 pm (Central European Time)",
+        book: "Book your workshop ticket",
+        imgCap: "Safe love, clear boundaries, real direction",
+        youGetTitle: "What you’ll get",
+        youGet: [
+          "Why Twin Flames avoid boundaries (and the real cost)",
+          "The 3 biggest boundary gaps: emotions, time, energy",
+          "Exercise: where am I crossing myself?",
+          "Energetic field repair: call your energy back",
+          "Clear scripts that increase respect and attraction",
+          "Integration and Q&A"
+        ],
+        bonusTitle: "BONUS",
+        bonus: [
+          { icon:"✨", text:"Channeled highlight for each participant" },
+          { icon:"📄", text:"PDF workbook" },
+          { icon:"▶", text:"Replay" }
+        ],
+        zoomNote: "Zoom · link after booking",
+        bookTitle: "Book",
+        bookNote: "Click the button, book securely, and you’ll receive all details by email. By paying, you confirm you have read and agree to the Terms and Conditions (Allgemeine Geschäftsbedingungen).",
+        bottom: "Register via the provided link"
+      }
+    };
+
+    function show(tab){
+      document.querySelectorAll('.lang').forEach(el=>el.classList.add('hidden'));
+      document.getElementById(tab).classList.remove('hidden');
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+      document.querySelector('[data-tab="'+tab+'"]').classList.add('active');
+
+      const s = STR[tab];
+
+      document.getElementById('b1').innerText = s.badge1;
+      document.getElementById('b2').innerText = s.badge2;
+      document.getElementById('b3').innerText = s.badge3;
+
+      document.getElementById('title').innerText = s.title;
+      document.getElementById('sub').innerText = s.sub;
+
+      document.querySelectorAll('.date1').forEach(n=>n.innerText = s.date1);
+      document.querySelectorAll('.time1').forEach(n=>n.innerText = s.time1);
+      document.querySelectorAll('.imgCap').forEach(n=>n.innerText = s.imgCap);
+
+      document.querySelectorAll('.youGetTitle').forEach(n=>n.innerText = s.youGetTitle);
+      document.querySelectorAll('.youGetList').forEach(ul=>{
+        ul.innerHTML = "";
+        s.youGet.forEach(item=>{
+          const li = document.createElement('li');
+          li.innerText = item;
+          ul.appendChild(li);
+        });
+      });
+
+      document.querySelectorAll('.bonusTitle').forEach(n=>n.innerText = s.bonusTitle);
+      document.querySelectorAll('.bonusList').forEach(list=>{
+        list.innerHTML = "";
+        s.bonus.forEach(b=>{
+          const li = document.createElement('li');
+          li.className = "bonusItem";
+          li.innerHTML = `<span class="bonusIcon">${b.icon}</span><span>${b.text}</span>`;
+          list.appendChild(li);
+        });
+      });
+
+      document.querySelectorAll('.zoomNote').forEach(n=>n.innerText = s.zoomNote);
+      document.querySelectorAll('.bookTitle').forEach(n=>n.innerText = s.bookTitle);
+      document.querySelectorAll('.bookNote').forEach(n=>n.innerText = s.bookNote);
+      document.querySelectorAll('.bottom').forEach(n=>n.innerText = s.bottom);
+
+      document.querySelectorAll('.cta').forEach(btn=>{
+        btn.innerText = s.book;
+        btn.href = PAYMENT_LINK;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', ()=>show('de'));
+  </script>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="heroimg">
+        <!-- Hero-Bild: /images/grenzen-hero.jpg -->
+        <img src="images/grenzen-hero.jpg" alt="Grenzen setzen hero" onerror="this.closest('.heroimg').style.display='none'">
+      </div>
+
+      <div class="row" style="justify-content:center;gap:12px;">
+        <span id="b1" class="badge"></span>
+        <span id="b2" class="badge"></span>
+        <span id="b3" class="badge"></span>
+      </div>
+
+      <h1 id="title"></h1>
+      <p id="sub" class="sub"></p>
+      <div class="glowline"></div>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="de" onclick="show('de')">Deutsch</button>
+        <button class="tab" data-tab="en" onclick="show('en')">English</button>
+      </div>
+    </div>
+
+    <!-- Deutsch -->
+    <div id="de" class="lang">
+      <div class="grid">
+        <div class="card">
+          <h2 class="youGetTitle"></h2>
+          <ul class="big youGetList"></ul>
+
+          <div class="bonus">
+            <div class="bonusTitle"></div>
+            <ul class="bonusList"></ul>
+          </div>
+
+          <div class="hr"></div>
+          <div class="row">
+            <span class="pill date1"></span>
+            <span class="pill time1"></span>
+            <span class="pill zoomNote"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="sideimg">
+            <!-- Dein Foto: /images/fabian.jpg -->
+            <img src="images/fabian.jpg" alt="Fabian – Workshop Host" onerror="this.closest('.sideimg').style.display='none'">
+          </div>
+          <p class="cap imgCap"></p>
+
+          <div class="hr"></div>
+          <h2 class="bookTitle"></h2>
+          <p class="note bookNote"></p>
+
+          <a class="cta"
+             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Y5ZHR86C3J3XJ"
+             target="_blank" rel="noopener">Workshop-Ticket buchen</a>
+
+          <div class="hr"></div>
+          <p class="note bottom"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- English -->
+    <div id="en" class="lang hidden">
+      <div class="grid">
+        <div class="card">
+          <h2 class="youGetTitle"></h2>
+          <ul class="big youGetList"></ul>
+
+          <div class="bonus">
+            <div class="bonusTitle"></div>
+            <ul class="bonusList"></ul>
+          </div>
+
+          <div class="hr"></div>
+          <div class="row">
+            <span class="pill date1"></span>
+            <span class="pill time1"></span>
+            <span class="pill zoomNote"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="sideimg">
+            <img src="images/fabian.jpg" alt="Fabian – Workshop Host" onerror="this.closest('.sideimg').style.display='none'">
+          </div>
+          <p class="cap imgCap"></p>
+
+          <div class="hr"></div>
+          <h2 class="bookTitle"></h2>
+          <p class="note bookNote"></p>
+
+          <a class="cta"
+             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Y5ZHR86C3J3XJ"
+             target="_blank" rel="noopener">Book your workshop ticket</a>
+
+          <div class="hr"></div>
+          <p class="note bottom"></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="legal">
+    <hr>
+    <h3 class="legalTitle">Allgemeine Geschäftsbedingungen</h3>
+    <div class="muted">
+      Von Twin Flames Universe zertifizierter Ascension Coach.<br>
+      Dualseelenmeisterschaft – alle Rechte vorbehalten. Alle Verkäufe sind endgültig.
+      <br><br>
+      Mit der Zahlung bestätigst du, dass du diese Allgemeinen Geschäftsbedingungen gelesen hast und ihnen zustimmst.
+      <br><br>
+      Mit der Buchung und Nutzung meiner spirituellen Coaching-Leistungen erkennst du an, dass ich kein approbierter Psychologe und kein Gesundheitsdienstleister bin und meine Leistungen keine Therapie oder medizinische Beratung ersetzen.
+      <br><br>
+      Wenn du dich in einer akuten seelischen Krise befindest oder Suizidgedanken hast, hole dir bitte sofort Hilfe:
+      <ul>
+        <li>Deutschland: TelefonSeelsorge <a href="tel:08001110111">0800 111 0 111</a>, <a href="tel:08001110222">0800 111 0 222</a> oder <a href="tel:116123">116 123</a>.</li>
+        <li>USA: 988 Suicide &amp; Crisis Lifeline, dial <a href="tel:988">988</a>.</li>
+      </ul>
+      Es ist immer jemand für dich da.
+    </div>
+  </footer>
+</body>
+</html>
