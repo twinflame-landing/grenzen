@@ -25,7 +25,7 @@
       --accent:#d8b65b;
       --accent2:#ffdf9a;
 
-      --button:#22c55e; /* conversion green (kannst du auf gold umstellen) */
+      --button:#22c55e;
     }
 
     html,body{
@@ -131,7 +131,6 @@
       border-radius:1px;
     }
 
-    /* Bonus Panel */
     .bonus{
       margin-top:14px;
       border-radius:14px;
@@ -167,7 +166,6 @@
       filter:drop-shadow(0 2px 6px rgba(216,182,91,.25));
     }
 
-    /* Footer legal (sehr klein) */
     footer.legal{
       max-width:980px;
       margin:18px auto 40px;
@@ -190,7 +188,8 @@
   </style>
 
   <script>
-    const PAYMENT_LINK = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Y5ZHR86C3J3XJ";
+    // PayPal link exakt wie von dir angegeben (mit & nicht &amp;)
+    const PAYMENT_LINK = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y5ZHR86C3J3XJ";
 
     const STR = {
       de: {
@@ -314,7 +313,6 @@
   <div class="wrap">
     <div class="hero">
       <div class="heroimg">
-        <!-- Hero-Bild: /images/grenzen-hero.jpg -->
         <img src="images/grenzen-hero.jpg" alt="Grenzen setzen hero" onerror="this.closest('.heroimg').style.display='none'">
       </div>
 
@@ -334,7 +332,6 @@
       </div>
     </div>
 
-    <!-- Deutsch -->
     <div id="de" class="lang">
       <div class="grid">
         <div class="card">
@@ -356,7 +353,6 @@
 
         <div class="card">
           <div class="sideimg">
-            <!-- Dein Foto: /images/fabian.jpg -->
             <img src="images/fabian.jpg" alt="Fabian – Workshop Host" onerror="this.closest('.sideimg').style.display='none'">
           </div>
           <p class="cap imgCap"></p>
@@ -366,7 +362,7 @@
           <p class="note bookNote"></p>
 
           <a class="cta"
-             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Y5ZHR86C3J3XJ"
+             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y5ZHR86C3J3XJ"
              target="_blank" rel="noopener">Workshop-Ticket buchen</a>
 
           <div class="hr"></div>
@@ -375,7 +371,6 @@
       </div>
     </div>
 
-    <!-- English -->
     <div id="en" class="lang hidden">
       <div class="grid">
         <div class="card">
@@ -406,7 +401,7 @@
           <p class="note bookNote"></p>
 
           <a class="cta"
-             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=Y5ZHR86C3J3XJ"
+             href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y5ZHR86C3J3XJ"
              target="_blank" rel="noopener">Book your workshop ticket</a>
 
           <div class="hr"></div>
